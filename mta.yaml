@@ -1,0 +1,16 @@
+ID: MyGitProject
+_schema-version: '2.1'
+version: 2.1.0
+
+modules:
+ - name: dbmodule
+   type: hdb
+   path: dbmodule
+   requires:
+    - name: hdi_dbmodule
+
+resources:
+ - name: hdi_dbmodule
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
